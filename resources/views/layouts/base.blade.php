@@ -5,19 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Home</title>
-    @vite(['resources/sass/home.scss', 'resources/js/app.js'])
 </head>
 <body>
     <header>
         <div class="px-3 py-2 text-bg-dark">
           <div class="container">
             <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-              <a href="/" class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none">
-                <img class="mb-4" src="{{ asset('images/LOGO_GYM.png') }}" alt="" width="50%">
+              <a href="/" class="d-flex align-items-center me-lg-auto text-white text-decoration-none" style="max-width: 20%; max-height: 3rem;">
+                <img class="mb-4" src="{{ asset('images/LOGO_GYM.png') }}" alt="Imagen del logo" style="width: 100%; max-height: 4rem;">
               </a>
               <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
                 <li>
-                  <a href="#" class="nav-link text-white">
+                  <a href="#" class="nav-link text-white align-text-center">
                     <i class="bi-person" style="font-size: 2rem; color: white;"></i>
                   </a>
                 </li>

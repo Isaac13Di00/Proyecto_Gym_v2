@@ -1,5 +1,6 @@
 @extends('layouts.base')
 @section('content')
+    @vite(['resources/sass/home.scss', 'resources/js/app.js'])
     <div class="container">
         <div class="row justify-content-center align-items-center">
             <div class="col card mb-3 mt-3 me-3" style="max-width: 95%;">
