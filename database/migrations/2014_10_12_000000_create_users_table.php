@@ -15,10 +15,17 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('email')->unique();
-            
-            $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
-            $table->boolean('isAdmin')->nullable(false);
+            $table->enum('sexo', ['Masculino', 'Femenino', 'Otro'])->nullable(false);
+            $table->date('fecha_nac')->nullable(false);
+            $table->enum('tipo_sangre', ['A+','A-','B+','B-','AB+','AB-','O+','O-'])->nullable(false);
+            $table->string('telefono', 10)->nullable(false);
+            $table->string('calle', 100)->nullable(false);
+            $table->string('colonia', 100)->nullable(false);
+            $table->string('cp', 5)->nullable(false);
+
+            $table->boolean('isAdmin')->nullable(false);            
+
             $table->rememberToken();
             $table->timestamps();
         });
