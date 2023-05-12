@@ -93,9 +93,8 @@
     <main>
         @yield('content')
     </main>
-    <footer class="p-auto m-auto" style="max-width: 90%;">
-        <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-        </ul>
+    <footer class="p-auto m-auto justify-content-center" style="position: fixed; height: 100px; bottom: 0; width: 100%;">
+        <ul class="nav justify-content-center border-bottom pb-3 mb-3"></ul>
         <p class="text-center text-body-secondary">Horario de atención de 8 am a 4 pm horario del centro de México. |
             soporte@krachtigym.mx | +52 998 187 8753</p>
     </footer>
