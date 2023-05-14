@@ -5,11 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Home</title>
 </head>
 
 <body>
-  @if (true)
+  @if ((Auth::user()->isAdmin)==0)
   <header>
       <div class="px-3 py-2 text-bg-dark">
           <div class="container">
@@ -20,11 +19,6 @@
                           style="width: 100%; max-height: 4rem;">
                   </a>
                   <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
-                      <li>
-                          <a href="#" class="nav-link text-white align-text-center">
-                              <i class="bi-person" style="font-size: 2rem; color: white;"></i>
-                          </a>
-                      </li>
                       <li>
                           <a href="#" class="nav-link text-white">
                               <i class="bi-calendar-plus" style="font-size: 2rem; color: white;"></i>
@@ -93,7 +87,7 @@
     <main>
         @yield('content')
     </main>
-    <footer class="p-auto m-auto justify-content-center" style="position: fixed; height: 100px; bottom: 0; width: 100%;">
+    <footer class="p-auto m-auto justify-content-center" style="height: 100px; bottom: 0; width: 100%;">
         <ul class="nav justify-content-center border-bottom pb-3 mb-3"></ul>
         <p class="text-center text-body-secondary">Horario de atención de 8 am a 4 pm horario del centro de México. |
             soporte@krachtigym.mx | +52 998 187 8753</p>
