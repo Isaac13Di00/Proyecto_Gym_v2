@@ -82,12 +82,10 @@
                                         </div>
                                     </div>
                                 </div>
-                            </form>
-                        </div>
-                        <div class="row justify-content-center">
-                            <form class="row justify-content-center" method="POST">
-                                <label for="data" hidden="true" id="label" class=""></label>
-                                <button type="submit" id="agendar" class="btn btn-outline-dark mt-3" style="max-width: 25%">Agendar</button>
+                                <div class="row justify-content-center">
+                                    <label for="data" hidden="true" id="label" class=""></label>
+                                    <button type="submit" id="agendar" class="btn btn-outline-dark mt-3" style="max-width: 25%">Agendar</button>
+                                </div>
                             </form>
                         </div>
                     </div>

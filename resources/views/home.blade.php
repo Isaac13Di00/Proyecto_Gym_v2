@@ -39,18 +39,6 @@
                 </div>
                 <div class="col card mb-3 mt-3" style="max-width: 30%;">
                     <img src="/images/user-alt.png" class="mt-2 mb-2 card-img-top" alt="Este se supone que eres tu.">
-                    <ul class="nav col-12 col-lg-auto my-2 justify-content-end my-md-0 text-small">
-                        <li>
-                            <a href="#" class="nav-link text-black">
-                                <i class="bi-person" style="font-size: 2rem; color: black;"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="nav-link text-black">
-                                <i class="bi-calendar-plus" style="font-size: 2rem; color: black;"></i>
-                            </a>
-                        </li>
-                    </ul>
                 </div>
             </div>
         @else
