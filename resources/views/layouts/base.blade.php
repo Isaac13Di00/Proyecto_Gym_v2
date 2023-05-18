@@ -19,7 +19,7 @@
                   </a>
                   <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
                       <li>
-                          <a href="#" class="nav-link text-white">
+                          <a href="{{url('agendar')}}" class="nav-link text-white">
                               <i class="bi-calendar-plus" style="font-size: 2rem; color: white;"></i>
                           </a>
                       </li>
@@ -34,7 +34,10 @@
                           </button>
                           <ul class="dropdown-menu dropdown-menu-dark">
                               <li><a class="dropdown-item" href="#">Política de privacidad</a></li>
-                              <li><a class="dropdown-item" href="#">Cerrar Sesión</a></li>
+                              <li><a class="dropdown-item" href="#"><form action="{{route('logout')}}" method="post">
+                                @csrf
+                                <button data-key="t-logout">Cerrar sesión</button>
+                            </form></a></li>
                           </ul>
                       </li>
                   </ul>
@@ -74,7 +77,10 @@
                         </button>
                         <ul class="dropdown-menu dropdown-menu-dark">
                             <li><a class="dropdown-item" href="#">Política de privacidad</a></li>
-                            <li><a class="dropdown-item" href="#">Cerrar Sesión</a></li>
+                            <li><a class="dropdown-item" href="#"><form action="{{route('logout')}}" method="post">
+                                @csrf
+                                <button data-key="t-logout">Cerrar sesión</button>
+                            </form></a></li>
                         </ul>
                     </li>
                 </ul>

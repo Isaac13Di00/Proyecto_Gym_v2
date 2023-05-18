@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CitasController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,11 +15,16 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('login');
 });
 
 
 
 Route::group(['middleware' => 'auth'], function(){
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+    Route::get('/agendar', function(){
+        return view('schedule');
+    });
+    Route::post('/agendar', [CitasController::class, 'store'])->name('agendar.store');
 });

@@ -13,8 +13,10 @@
                 <div class="row justify-content-center mx-0">
                     <div class="col-lg-10">
                         <div class="card border-0">
-                            <form autocomplete="off">
+                            <form autocomplete="off" action="{{route('agendar.store')}}" method="POST">
+                                        @csrf
                                 <div class="card-header bg-dark">
+                                    
                                     <div class="mx-0 mb-0 row justify-content-sm-center justify-content-start px-1">
                                         <input type="text" id="dp1" class="datepicker" placeholder="Pick Date"
                                             name="date" readonly><span class="fa fa-calendar"></span>
@@ -82,12 +84,15 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="row justify-content-center">
-                                    <label for="data" hidden="true" id="label" class=""></label>
-                                    <button type="submit" id="agendar" class="btn btn-outline-dark mt-3" style="max-width: 25%">Agendar</button>
-                                </div>
-                            </form>
+                            
                         </div>
+                        <div class="row justify-content-center">
+                                <input type="hidden" id="label" name="hour"></label>
+                                <input type="submit" value="Agendar"  class="btn btn-outline-dark mt-3" style="max-width: 25%">
+                            
+                        </div>
+                    </form>
+                    
                     </div>
                 </div>
             </div>
