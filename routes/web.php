@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CitasController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -27,4 +28,6 @@ Route::group(['middleware' => 'auth'], function(){
         return view('schedule');
     });
     Route::post('/agendar', [CitasController::class, 'store'])->name('agendar.store');
+    Route::get('/users', [UserController::class, 'show'])->name('users.show');
+    Route::get('/user/{id}', [UserController::class, 'showUser'])->name('user.showUser');
 });

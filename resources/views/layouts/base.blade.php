@@ -57,7 +57,7 @@
                 </a>
                 <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
                     <li>
-                        <a href="#" class="nav-link text-white align-text-center">
+                        <a href="{{route('users.show')}}" class="nav-link text-white align-text-center">
                             <i class="bi-person-rolodex" style="font-size: 2rem; color: white;"></i>
                         </a>
                     </li>
