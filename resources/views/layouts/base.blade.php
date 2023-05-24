@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 </head>
 <body>
-  @if ((Auth::user()->isAdmin)==0)
+  @if (0)
   <header>
       <div class="px-3 py-2 text-bg-dark">
           <div class="container">
@@ -56,10 +56,16 @@
                         style="width: 100%; max-height: 4rem;">
                 </a>
                 <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
-                    <li>
-                        <a href="{{route('users.show')}}" class="nav-link text-white align-text-center">
+                    <li class="nav-item dropdown">
+                        <button class="btn dropdown" data-bs-toggle="dropdown" aria-expanded="false">
                             <i class="bi-person-rolodex" style="font-size: 2rem; color: white;"></i>
-                        </a>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-dark">
+                        {{-- {{route('users.show')}} --}}
+                            <li><a href="#" class="dropdown-item">Lista de socios</a></li>
+                            <li><a href="#" class="dropdown-item">Lista de administrativos</a></li>
+                            <li><a href="#" class="dropdown-item">Nuevo socio</a></li>
+                        </ul>
                     </li>
                     <li>
                         <a href="#" class="nav-link text-white">
