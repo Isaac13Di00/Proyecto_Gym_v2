@@ -2,7 +2,8 @@
 @section('content')
     @vite(['resources/sass/home.scss', 'resources/js/app.js'])
     <div class="container">
-        @if ((Auth::user()->isAdmin) == 0)
+        {{-- @if ((Auth::user()->isAdmin) == 0) --}}
+        @if (false)
             <title>Home</title>
             <div class="row justify-content-center align-items-center">
                 <div class="col card mb-3 mt-3 me-3" style="max-width: 95%;">
@@ -45,27 +46,24 @@
             <title>Home - Admin</title>
             <div class="row justify-content-center align-items-center" style="width : 100%; height : 100%;">
                 <div class="card text-bg-light m-3" style="max-width: 18rem;">
-                    <div class="card-header">Header</div>
-                    <div class="card-body">
-                        <h5 class="card-title">Light card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                            card's content.</p>
+                    <div class="card-body text-center">
+                        <h5 class="card-title fs-2">Socios</h5>
+                        <ul class="nav justify-content-center border-bottom pb-3 mb-3"></ul>
+                        <p class="card-text fs-2">INSERTE CANTIDAD</p>
                     </div>
                 </div>
                 <div class="card text-bg-success m-3" style="max-width: 18rem;">
-                    <div class="card-header">Header</div>
-                    <div class="card-body">
-                        <h5 class="card-title">Success card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                            card's content.</p>
+                    <div class="card-body text-center">
+                        <h5 class="card-title fs-2">Socios activos</h5>
+                        <ul class="nav justify-content-center border-bottom pb-3 mb-3"></ul>
+                        <p class="card-text fs-2">INSERTE CANTIDAD</p>
                     </div>
                 </div>
                 <div class="card text-bg-danger m-3" style="max-width: 18rem;">
-                    <div class="card-header">Header</div>
-                    <div class="card-body">
-                        <h5 class="card-title">Danger card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                            card's content.</p>
+                    <div class="card-body text-center">
+                        <h5 class="card-title fs-2">Socios vencidos</h5>
+                        <ul class="nav justify-content-center border-bottom pb-3 mb-3"></ul>
+                        <p class="card-text mt-4 fs-2">INSERTE CANTIDAD</p>
                     </div>
                 </div>
             </div>
