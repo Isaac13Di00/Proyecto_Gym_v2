@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="/images/ICON_GYM.png"/>
 </head>
 <body>
   @if (0)
@@ -12,7 +13,7 @@
       <div class="px-3 py-2 text-bg-dark">
           <div class="container">
               <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-                  <a href="/" class="d-flex align-items-center me-lg-auto text-white text-decoration-none"
+                  <a href="" class="d-flex align-items-center me-lg-auto text-white text-decoration-none"
                       style="max-width: 20%; max-height: 3rem;">
                       <img class="mb-4" src="{{ asset('images/LOGO_GYM.png') }}" alt="Imagen del logo"
                           style="width: 100%; max-height: 4rem;">
@@ -64,7 +65,7 @@
                         {{-- {{route('users.show')}} --}}
                             <li><a href="#" class="dropdown-item">Lista de socios</a></li>
                             <li><a href="#" class="dropdown-item">Lista de administrativos</a></li>
-                            <li><a href="#" class="dropdown-item">Nuevo socio</a></li>
+                            <li><a href="register" class="dropdown-item">Nuevo socio</a></li>
                         </ul>
                     </li>
                     <li>
