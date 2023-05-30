@@ -1,7 +1,7 @@
 @extends('layouts.base')
 @section('content')
     @vite(['resources/sass/home.scss', 'resources/js/app.js'])
-    <div class="container">
+    <div class="container" style="height: 100%;">
         {{-- @if ((Auth::user()->isAdmin) == 0) --}}
         @if (false)
             <title>Home</title>
@@ -44,7 +44,7 @@
             </div>
         @else
             <title>Home - Admin</title>
-            <div class="row justify-content-center align-items-center" style="width : 100%; height : 100%;">
+            <div class="d-flex aligns-items-center justify-content-center" style="height:100%">
                 <div class="card text-bg-light m-3" style="max-width: 18rem;">
                     <div class="card-body text-center">
                         <h5 class="card-title fs-2">Socios</h5>

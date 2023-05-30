@@ -65,7 +65,7 @@
                         {{-- {{route('users.show')}} --}}
                             <li><a href="#" class="dropdown-item">Lista de socios</a></li>
                             <li><a href="#" class="dropdown-item">Lista de administrativos</a></li>
-                            <li><a href="register" class="dropdown-item">Nuevo socio</a></li>
+                            <li><a href="register" class="dropdown-item">Nuevo usuario</a></li>
                         </ul>
                     </li>
                     <li>
@@ -84,10 +84,10 @@
                         </button>
                         <ul class="dropdown-menu dropdown-menu-dark">
                             <li><a class="dropdown-item" href="#">Política de privacidad</a></li>
-                            <li><a class="dropdown-item" href="#"><form action="{{route('logout')}}" method="post">
+                            <li><form action="{{route('logout')}}" method="post">
                                 @csrf
-                                <button data-key="t-logout">Cerrar sesión</button>
-                            </form></a></li>
+                                <button class="dropdown-item" data-key="t-logout">Cerrar sesión</button>
+                            </form></li>
                         </ul>
                     </li>
                 </ul>
