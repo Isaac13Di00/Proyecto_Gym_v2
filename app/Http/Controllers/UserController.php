@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
 {
@@ -26,5 +27,22 @@ class UserController extends Controller
     public function showUser($id){
         $user = User::find($id);
         return view('/userInfo', compact('user'));
+    }
+
+    public function create(Request $request){
+        $user = User::create([
+            'name' => $request->name,
+            'email' => $request->email,
+            'password' => Hash::make($request->password),
+            'sexo' => $request->sexo,
+            'fecha_nac' => $request->birth,
+            'tipo_sangre' => $request->sangre,
+            'telefono' => $request->phone,
+            'calle' => $request->street,
+            'colonia' => $request->col,
+            'cp' => $request->cp,
+            'isAdmin' => $request->isAdmin
+        ]);
+        return $request;
     }
 }

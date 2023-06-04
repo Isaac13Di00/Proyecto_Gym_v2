@@ -65,7 +65,7 @@
                         {{-- {{route('users.show')}} --}}
                             <li><a href="{{route('users.show')}}" class="dropdown-item">Lista de socios</a></li>
                             <li><a href="{{route('users.showAdmins')}}" class="dropdown-item">Lista de administrativos</a></li>
-                            <li><a href="register" class="dropdown-item">Nuevo usuario</a></li>
+                            <li><a href="{{route('users.register')}}" class="dropdown-item">Nuevo usuario</a></li>
                         </ul>
                     </li>
                     <li>

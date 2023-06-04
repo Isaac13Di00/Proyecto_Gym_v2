@@ -31,4 +31,8 @@ Route::group(['middleware' => 'auth'], function(){
     Route::get('/users', [UserController::class, 'show'])->name('users.show');
     Route::get('/admins', [UserController::class, 'showAdmins'])->name('users.showAdmins');
     Route::get('/user/{id}', [UserController::class, 'showUser'])->name('user.showUser');
+    Route::get('/register', function(){
+        return view('register');
+    })->name('users.register');
+    Route::post('/register', [UserController::class, 'create'])->name('users.registerNew');
 });

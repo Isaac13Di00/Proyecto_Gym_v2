@@ -4,7 +4,7 @@
     <title>Registrar socio</title>
     <div class="container" style="width: 50%">
         <div class="row items-center text-center mt-3">
-            <form action="" method="post">
+            <form action="{{route('users.registerNew')}}" method="post">
                 @csrf
                 <h1 class="h3 mb-3 fw-normal">Ingrese todos los datos</h1>
                 <div class="form-floating mb-2">
@@ -17,30 +17,30 @@
                     <label for="floatingInput">Email address</label>
                 </div>
                 <div class="form-floating mb-2">
-                    <select class="form-select" id="floatingSelectGender" aria-label="Floating label select example"
+                    <select class="form-select" id="floatingSelectGender" aria-label="Floating label select example" name="sexo"
                         required>
                         <option selected value="">Select gender</option>
-                        <option value="Masculino">Masculino</option>
-                        <option value="Femenino">Femenino</option>
-                        <option value="Otro">Otro</option>
+                        <option value="Masculino" name="sexo">Masculino</option>
+                        <option value="Femenino" name="sexo">Femenino</option>
+                        <option value="Otro" name="sexo">Otro</option>
                     </select>
                     <label for="floatingSelect">Gender</label>
                 </div>
                 <div class="form-floating mb-2">
-                    <input for="birthday" type="date" class="form-control" required>
+                    <input for="birthday" type="date" class="form-control" name="birth" required>
                     <label for="floatingInput">Birth date</label>
                 </div>
                 <div class="form-floating mb-2">
-                    <select class="form-select" id="floatingSelectBLood" required>
+                    <select class="form-select" id="floatingSelectBLood" name="sangre" required>
                         <option selected value="">Select blood type</option>
-                        <option value="A+">A+</option>
-                        <option value="A-">A-</option>
-                        <option value="B+">B+</option>
-                        <option value="B-">B-</option>
-                        <option value="AB+">AB+</option>
-                        <option value="AB-">AB-</option>
-                        <option value="O+">O+</option>
-                        <option value="O-">O-</option>
+                        <option value="A+" name="sangre">A+</option>
+                        <option value="A-" name="sangre">A-</option>
+                        <option value="B+" name="sangre">B+</option>
+                        <option value="B-" name="sangre">B-</option>
+                        <option value="AB+" name="sangre">AB+</option>
+                        <option value="AB-" name="sangre">AB-</option>
+                        <option value="O+" name="sangre">O+</option>
+                        <option value="O-" name="sangre">O-</option>
                     </select>
                     <label for="floatingSelect">Blood type</label>
                 </div>
@@ -69,13 +69,13 @@
                 <label class="form-label">Selecciona el tipo de usuario</label>
                 <div class="form-floating mb-3">
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                        <input class="form-check-input" type="radio" value="0" name="isAdmin" id="flexRadioDefault2" checked>
                         <label class="form-check-label" for="flexRadioDefault2">
                             Socio
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                        <input class="form-check-input" value="1" type="radio" name="isAdmin" id="flexRadioDefault1">
                         <label class="form-check-label" for="flexRadioDefault1">
                             Administrador
                         </label>

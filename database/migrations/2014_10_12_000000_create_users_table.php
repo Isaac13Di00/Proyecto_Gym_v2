@@ -20,11 +20,11 @@ return new class extends Migration
             $table->date('fecha_nac')->nullable(false);
             $table->enum('tipo_sangre', ['A+','A-','B+','B-','AB+','AB-','O+','O-'])->nullable(false);
             $table->string('telefono', 10)->nullable(false);
-            $table->string('calle', 100)->nullable(false);
-            $table->string('colonia', 100)->nullable(false);
-            $table->string('cp', 5)->nullable(false);
+            $table->string('calle', 100)->nullable();
+            $table->string('colonia', 100)->nullable();
+            $table->string('cp', 5)->nullable();
 
-            $table->boolean('isAdmin')->nullable(false);            
+            $table->tinyInteger('isAdmin')->nullable(false);            
 
             $table->rememberToken();
             $table->timestamps();
