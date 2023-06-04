@@ -22,12 +22,13 @@ Route::get('/', function () {
 
 
 Route::group(['middleware' => 'auth'], function(){
-    Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+    Route::get('/home', [UserController::class, 'index'])->name('home');
 
     Route::get('/agendar', function(){
         return view('schedule');
     });
     Route::post('/agendar', [CitasController::class, 'store'])->name('agendar.store');
     Route::get('/users', [UserController::class, 'show'])->name('users.show');
+    Route::get('/admins', [UserController::class, 'showAdmins'])->name('users.showAdmins');
     Route::get('/user/{id}', [UserController::class, 'showUser'])->name('user.showUser');
 });

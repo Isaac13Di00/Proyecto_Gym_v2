@@ -63,8 +63,8 @@
                         </button>
                         <ul class="dropdown-menu dropdown-menu-dark">
                         {{-- {{route('users.show')}} --}}
-                            <li><a href="#" class="dropdown-item">Lista de socios</a></li>
-                            <li><a href="#" class="dropdown-item">Lista de administrativos</a></li>
+                            <li><a href="{{route('users.show')}}" class="dropdown-item">Lista de socios</a></li>
+                            <li><a href="{{route('users.showAdmins')}}" class="dropdown-item">Lista de administrativos</a></li>
                             <li><a href="register" class="dropdown-item">Nuevo usuario</a></li>
                         </ul>
                     </li>

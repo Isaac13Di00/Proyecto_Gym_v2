@@ -49,7 +49,7 @@
                     <div class="card-body text-center">
                         <h5 class="card-title fs-2">Socios</h5>
                         <ul class="nav justify-content-center border-bottom pb-3 mb-3"></ul>
-                        <p class="card-text fs-2">INSERTE CANTIDAD</p>
+                        <p class="card-text fs-2">{{$count}}</p>
                     </div>
                 </div>
                 <div class="card text-bg-success m-3" style="max-width: 18rem;">
