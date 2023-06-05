@@ -44,29 +44,33 @@
                         @csrf
                         @method('put')
                         <input type="hidden" name="id" value="{{Auth::user()->id}}">
-                        <input type="file" name="file">
-                        <input type="submit" value="cambiar imagen">
+                        <div class="input-group mb-3">
+                            <input type="file" class="form-control" name="file" id="inputGroupFile02">
+                            <button class="btn btn-outline-dark" type="submit" id="inputGroupFileAddon04">Cambiar imagen</button>
+                          </div>                          
+                        {{-- <input class="btn btn-dark" type="file" name="file">
+                        <input type="submit" value="cambiar imagen"> --}}
                     </form>
                 </div>
             </div>
         @else
             <title>Home - Admin</title>
             <div class="d-flex aligns-items-center justify-content-center" style="height:100%">
-                <div class="card text-bg-light m-3" style="max-width: 18rem;">
+                <div class="card text-bg-light m-3" style="min-width: 18rem;">
                     <div class="card-body text-center">
                         <h5 class="card-title fs-2">Socios</h5>
                         <ul class="nav justify-content-center border-bottom pb-3 mb-3"></ul>
                         <p class="card-text fs-2">{{$count}}</p>
                     </div>
                 </div>
-                <div class="card text-bg-success m-3" style="max-width: 18rem;">
+                <div class="card text-bg-success m-3" style="min-width: 18rem;">
                     <div class="card-body text-center">
                         <h5 class="card-title fs-2">Socios activos</h5>
                         <ul class="nav justify-content-center border-bottom pb-3 mb-3"></ul>
                         <p class="card-text fs-2">INSERTE CANTIDAD</p>
                     </div>
                 </div>
-                <div class="card text-bg-danger m-3" style="max-width: 18rem;">
+                <div class="card text-bg-danger m-3" style="min-width: 18rem;">
                     <div class="card-body text-center">
                         <h5 class="card-title fs-2">Socios vencidos</h5>
                         <ul class="nav justify-content-center border-bottom pb-3 mb-3"></ul>

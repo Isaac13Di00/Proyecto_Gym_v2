@@ -20,7 +20,6 @@ Route::get('/', function () {
 });
 
 
-
 Route::group(['middleware' => 'auth'], function(){
     Route::get('/home', [UserController::class, 'index'])->name('home');
 
