@@ -28,6 +28,7 @@ class User extends Authenticatable
         'calle',
         'colonia',
         'cp',
+        'imagen',
         'isAdmin',
     ];
 

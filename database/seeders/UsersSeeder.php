@@ -27,6 +27,7 @@ class UsersSeeder extends Seeder
         $user->calle = 'Alban';
         $user->colonia = 'sol';
         $user->cp = '98653';
+        $user->imagen = '/images/user-alt.png';
         $user->isAdmin = true;
         $user->save();
 
@@ -41,6 +42,7 @@ class UsersSeeder extends Seeder
         $user->calle = 'Alban';
         $user->colonia = 'sol';
         $user->cp = '98653';
+        $user->imagen = '/images/user-alt.png';
         $user->isAdmin = false;
         $user->save();
 

@@ -25,7 +25,7 @@ return new class extends Migration
             $table->string('cp', 5)->nullable();
 
             $table->tinyInteger('isAdmin')->nullable(false);            
-
+            $table->string('imagen')->nullable(false);
             $table->rememberToken();
             $table->timestamps();
         });

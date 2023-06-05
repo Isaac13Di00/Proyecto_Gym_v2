@@ -2,8 +2,8 @@
 @section('content')
     @vite(['resources/sass/home.scss', 'resources/js/app.js'])
     <div class="container" style="height: 100%;">
-        {{-- @if ((Auth::user()->isAdmin) == 0) --}}
-        @if (false)
+         @if ((Auth::user()->isAdmin) == 0)
+        
             <title>Home</title>
             <div class="row justify-content-center align-items-center">
                 <div class="col card mb-3 mt-3 me-3" style="max-width: 95%;">
@@ -39,7 +39,14 @@
                     </div>
                 </div>
                 <div class="col card mb-3 mt-3" style="max-width: 30%;">
-                    <img src="/images/user-alt.png" class="mt-2 mb-2 card-img-top" alt="Este se supone que eres tu.">
+                    <img src="{{Auth::user()->imagen}}" class="mt-2 mb-2 card-img-top" alt="Este se supone que eres tu.">
+                    <form action="{{route('user.image')}}" enctype="multipart/form-data" method="POST">
+                        @csrf
+                        @method('put')
+                        <input type="hidden" name="id" value="{{Auth::user()->id}}">
+                        <input type="file" name="file">
+                        <input type="submit" value="cambiar imagen">
+                    </form>
                 </div>
             </div>
         @else

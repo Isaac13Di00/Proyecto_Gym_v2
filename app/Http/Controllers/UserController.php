@@ -7,6 +7,8 @@ use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Str;
+
 
 class UserController extends Controller
 {
@@ -41,8 +43,22 @@ class UserController extends Controller
             'calle' => $request->street,
             'colonia' => $request->col,
             'cp' => $request->cp,
+            'imagen' => "/images/user-alt.png",
             'isAdmin' => $request->isAdmin
         ]);
-        return $request;
+        $id = $user->id;
+        return redirect('/user/'.$id)->with('user');
+    }
+
+    public function changeImage(Request $request){
+        $user = User::find($request->id);
+        $imagen = $request->file('file');
+        $nombreImg = Str::slug($user->name).".".$imagen->guessExtension();
+        $ruta = public_path('images/');
+        $imagen->move($ruta, $nombreImg);
+        $user->imagen = "/images/".$nombreImg;
+        $user->save();
+        return view('home');
+
     }
 }

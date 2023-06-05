@@ -30,6 +30,7 @@ class UserFactory extends Factory
             'colonia' => $this->faker->word(),
             'cp' => '12345',
             'isAdmin' => false,
+            'imagen' => '/images/user-alt.png',
             'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
             'remember_token' => Str::random(10),
         ];

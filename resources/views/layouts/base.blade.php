@@ -8,7 +8,7 @@
     <link rel="shortcut icon" href="/images/ICON_GYM.png"/>
 </head>
 <body>
-  @if (0)
+  @if (Auth::user()->isAdmin == 0)
   <header>
       <div class="px-3 py-2 text-bg-dark">
           <div class="container">
