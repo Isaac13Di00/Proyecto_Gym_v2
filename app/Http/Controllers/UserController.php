@@ -51,6 +51,9 @@ class UserController extends Controller
     }
 
     public function changeImage(Request $request){
+        $request->validate([
+            'file' => 'required|image|max:2024'
+        ]);
         $user = User::find($request->id);
         $imagen = $request->file('file');
         $nombreImg = Str::slug($user->name).".".$imagen->guessExtension();
@@ -58,7 +61,7 @@ class UserController extends Controller
         $imagen->move($ruta, $nombreImg);
         $user->imagen = "/images/".$nombreImg;
         $user->save();
-        return view('home');
+        return redirect('/home/')->with('user');
 
     }
 }
