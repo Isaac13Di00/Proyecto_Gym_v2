@@ -35,4 +35,7 @@ Route::group(['middleware' => 'auth'], function(){
     })->name('users.register');
     Route::post('/register', [UserController::class, 'create'])->name('users.registerNew');
     Route::put('/home', [UserController::class, 'changeImage'])->name('user.image');
+    Route::get('/tabla', function(){
+        return view('userTable');
+    });
 });
