@@ -45,7 +45,7 @@
                         @method('put')
                         <input type="hidden" name="id" value="{{Auth::user()->id}}">
                         <div class="input-group mb-3">
-                            <input type="file" class="form-control" name="file" id="inputGroupFile02">
+                            <input type="file" class="form-control" name="file" id="inputGroupFile02" required>
                             <button class="btn btn-outline-dark" type="submit" id="inputGroupFileAddon04">Cambiar imagen</button>
                           </div>                          
                         {{-- <input class="btn btn-dark" type="file" name="file">
